@@ -1,0 +1,12 @@
+com/siigo/qa/tasks/Modificar.java
+ com.siigo.qa.tasks.Modificar
+com/siigo/qa/user_interfaces/FalabellaHomeUI.java
+ com.siigo.qa.user_interfaces.FalabellaHomeUI
+com/siigo/qa/user_interfaces/HomeUI.java
+ com.siigo.qa.user_interfaces.HomeUI
+com/siigo/qa/tasks/Ingresar.java
+ com.siigo.qa.tasks.Ingresar
+com/siigo/qa/tasks/Agregar.java
+ com.siigo.qa.tasks.Agregar
+com/siigo/qa/questions/ElValor.java
+ com.siigo.qa.questions.ElValor
