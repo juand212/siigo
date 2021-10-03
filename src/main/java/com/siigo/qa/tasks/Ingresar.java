@@ -4,7 +4,6 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.type.Type;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static com.siigo.qa.user_interfaces.HomeUI.BUSCAR;
 import static com.siigo.qa.user_interfaces.HomeUI.LINK;

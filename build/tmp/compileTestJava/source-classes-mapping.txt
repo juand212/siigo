@@ -1,4 +1,10 @@
-com/siigo/qa/runners/CarritoDeCompras.java
- com.siigo.qa.runners.CarritoDeCompras
+com/siigo/qa/runners/Crud.java
+ com.siigo.qa.runners.Crud
+com/siigo/qa/backend/CRUD.java
+ com.siigo.qa.backend.CRUD
 com/siigo/qa/steps_definitions/CarritoDeComprasSteps.java
  com.siigo.qa.steps_definitions.CarritoDeComprasSteps
+com/siigo/qa/runners/CarritoDeCompras.java
+ com.siigo.qa.runners.CarritoDeCompras
+com/siigo/qa/steps_definitions/TestingAPIsteps.java
+ com.siigo.qa.steps_definitions.TestingAPIsteps
