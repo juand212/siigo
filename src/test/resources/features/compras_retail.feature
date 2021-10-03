@@ -3,7 +3,7 @@ Feature: Realizar el proceso de compra
   Yo como usuario de Amazon
   Quiero poder comprar desde la pagina
   Para realizar mis compras comodamente
-
+  @prioritario
   Scenario: Usuario con cuenta Amazon configuarada compra articulo con Tarjata de credito con resultado exitoso
     Given el se encuentra logueado en la pagina principal de Amazon
     When el realiza la busqueda del articulo <"articulo">
@@ -13,6 +13,7 @@ Feature: Realizar el proceso de compra
       | <articulo> | <numeroTarjetaDebito> | <nombreEnLaTarjeta> | <fechaCaducidad> | <cvv> |
     Then el deberia poder ver el mensaje de compra exitosa
 
+    @prioritario
   Scenario Outline: Usuario con cuenta Amazon configuarada compra articulo con Tarjata de credito <"escenario">
     Given el se encuentra logueado en la pagina principal de Amazon
     When el realiza la busqueda del articulo <"articulo">
@@ -32,7 +33,7 @@ Feature: Realizar el proceso de compra
       | haedset    | articulo | numeroTarjetaDebito | nombreEnLaTarjeta | fechaCaducidad | cvv | valida sin cupo suficiente para la compra        | "La compra fue rechazada por falta de fondos sucifientes"                   |
 
     #Compra con tarjeta debito
-
+  @prioritario
   Scenario : Usuario con cuenta Amazon configuarada compra articulo con Tarjata debito con resultado Exitoso
     Given el se encuentra logueado en la pagina principal de Amazon
     When el realiza la busqueda del articulo <"articulo">
@@ -41,7 +42,7 @@ Feature: Realizar el proceso de compra
       | articulo   | numeroTarjetaDebito   | nombreEnLaTarjeta   | fechaCaducidad   | cvv   |
       | <articulo> | <numeroTarjetaDebito> | <nombreEnLaTarjeta> | <fechaCaducidad> | <cvv> |
     Then el deberia poder ver el mensaje de compra exitosa
-
+  @prioritario
   Scenario: Usuario logueado realiza compra agregando una nueva tarjeta debito valida
     Given el se encuentra logueado en la pagina principal de Amazon
     When el realiza la busqueda del articulo <"articulo">
@@ -51,7 +52,7 @@ Feature: Realizar el proceso de compra
       | <articulo> | <numeroTarjetaDebito> | <nombreEnLaTarjeta> | <fechaCaducidad> | <cvv> |
     Then el deberia poder ver el mensaje de compra exitosa
 
-
+  @prioritario
   Scenario: Usuario sin cuenta de Amazon realiza compra con tarjeta debito valida creando una nueva cuenta de amazon
     Given el se encuentra en la pagina de creacion de cuenta nueva de Amazon
     When el crea su cuenta en amazon con sus datos e inicia sesion
@@ -73,7 +74,7 @@ Feature: Realizar el proceso de compra
       | articulo   | numeroTarjetaDebito   | nombreEnLaTarjeta   | fechaCaducidad   | cvv   |
       | <articulo> | <numeroTarjetaDebito> | <nombreEnLaTarjeta> | <fechaCaducidad> | <cvv> |
     Then el deberia poder ver el mensaje de compra exitosa
-
+  @prioritario
   Scenario:Usuario logueado realiza compra con el metodo de pago predeterminado
     Given el se encuentra logueado en la pagina principal de Amazon
     When el realiza la busqueda del articulo <"articulo">
@@ -81,7 +82,7 @@ Feature: Realizar el proceso de compra
     And el realiza la compra del articulo con el medio de pago predeterminado
     Then el deberia poder ver el mensaje de compra exitosa
 
-
+  @prioritario
   Scenario Outline: Usuario con cuenta Amazon configuarada compra articulo con Tarjata debito  <"escenario">
     Given el se encuentra logueado en la pagina principal de Amazon
     When el realiza la busqueda del articulo <"articulo">
@@ -102,13 +103,14 @@ Feature: Realizar el proceso de compra
       | haedset    | articulo | numeroTarjetaDebito | nombreEnLaTarjeta | fechaCaducidad | cvv | sin saldo suficiente                        | "La tarjeta seleccionada no tiene saldo suficiente para realizar la compra" |
 
     #Cupon
+  @prioritario
   Scenario: Usuario con cuenta Amazon configuarada compra articulo con el medio de pago predeterminado y cupon de descuento con resultado Exitoso
     Given el se encuentra logueado en la pagina principal de Amazon
     When el realiza la busqueda del articulo <"articulo">
     And el agregar el articulo al carrito de compras
     And el aplica el cupon de descuento <"cupon"> a su compra actual
     Then el deberia poder que el fue aplicado con exito
-
+  @prioritario
   Scenario Outline: Usuario con cuenta Amazon configuarada compra articulo con el medio de pago predeterminado y cupon de descuento "<escenario>">
     Given el se encuentra logueado en la pagina principal de Amazon
     When el realiza la busqueda del articulo <"articulo">
